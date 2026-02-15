@@ -54,6 +54,9 @@ Tumor_Location = st.selectbox("Tumor Location:", options=[1, 2, 3], format_func=
 # Multifocality: categorical selection (1=Yes, 0=No)
 Multifocality = st.selectbox("Multifocality:", options=[0, 1], format_func=lambda x: 'No (0)' if x == 0 else 'Yes (1)')
 
+# Multifocality: categorical selection (1=Yes, 0=No)
+Extrathyroidal_extension = st.selectbox("Extrathyroidal_extension:", options=[0, 1], format_func=lambda x: 'No (0)' if x == 0 else 'Yes (1)')
+
 # PLR: numerical input
 PLR = st.number_input("PLR (Platelet-to-Lymphocyte Ratio):", min_value=0.0, max_value=1000.0, value=150.0)
 
