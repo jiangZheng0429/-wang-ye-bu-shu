@@ -36,8 +36,7 @@ thal_options = {
 
 # Define feature names
 feature_names = [
-    "Age", "Max_Diameter", "Tumor_Location", "Multifocality", "PLR",
-    "SII"]
+    "Age", "Max_Diameter", "Tumor_Location", "Multifocality", "PLR","Extrathyroidal_extension","SII"]
 
 # Streamlit user interface
 st.title("Predictor of Skip metastasis in papillary thyroid cancer ")
@@ -51,10 +50,10 @@ Max_Diameter = st.selectbox("Max Diameter:", options=[0, 1], format_func=lambda 
 # Tumor_Location: categorical selection (1=Upper, 2=Middle, 3=Lower)
 Tumor_Location = st.selectbox("Tumor Location:", options=[1, 2, 3], format_func=lambda x: {1:'Upper (1)', 2:'Middle (2)', 3:'Lower (3)'}[x])
 
-# Multifocality: categorical selection (1=Yes, 0=No)
+# Multifocality categorical selection (1=Yes, 0=No)
 Multifocality = st.selectbox("Multifocality:", options=[0, 1], format_func=lambda x: 'No (0)' if x == 0 else 'Yes (1)')
 
-# Multifocality: categorical selection (1=Yes, 0=No)
+# Extrathyroidal_extension: categorical selection (1=Yes, 0=No)
 Extrathyroidal_extension = st.selectbox("Extrathyroidal_extension:", options=[0, 1], format_func=lambda x: 'No (0)' if x == 0 else 'Yes (1)')
 
 # PLR: numerical input
