@@ -6,33 +6,8 @@ import shap
 import matplotlib.pyplot as plt
 
 # Load the model
-model = joblib.load("D:\机器学习预测模型全流程代码_全网同名_派大珍\网页构建\期刊复现：基于XGBoost模型的网页工具SHAP力图解释单样本预测结果 2025-5-6 84818 1\XGBoost.pkl")
+model = joblib.load("XGBoost.pkl")
 
-# Define feature options
-cp_options = {
-    1: 'Typical angina (1)',
-    2: 'Atypical angina (2)',
-    3: 'Non-anginal pain (3)',
-    4: 'Asymptomatic (4)'
-}
-
-restecg_options = {
-    0: 'Normal (0)',
-    1: 'ST-T wave abnormality (1)',
-    2: 'Left ventricular hypertrophy (2)'
-}
-
-slope_options = {
-    1: 'Upsloping (1)',
-    2: 'Flat (2)',
-    3: 'Downsloping (3)'
-}
-
-thal_options = {
-    1: 'Normal (1)',
-    2: 'Fixed defect (2)',
-    3: 'Reversible defect (3)'
-}
 
 # Define feature names
 feature_names = [
@@ -63,7 +38,7 @@ PLR = st.number_input("PLR (Platelet-to-Lymphocyte Ratio):", min_value=0.0, max_
 SII = st.number_input("SII (Systemic Immune-Inflammation Index):", min_value=0.0, max_value=10000.0, value=500.0)
 
 # Process inputs and make predictions
-feature_values = [Age, Max_Diameter, Tumor_Location, Multifocality, PLR, SII]
+feature_values = [Age, Max_Diameter, Tumor_Location, Multifocality,Extrathyroidal_extension,PLR, SII]
 features = np.array([feature_values])
 
 if st.button("Predict"):
