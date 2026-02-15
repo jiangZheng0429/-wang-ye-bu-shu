@@ -6,7 +6,7 @@ import shap
 import matplotlib.pyplot as plt
 
 # Load the model
-model = joblib.load("XGBoost.pkl")
+model = joblib.load("D:\机器学习预测模型全流程代码_全网同名_派大珍\网页构建\期刊复现：基于XGBoost模型的网页工具SHAP力图解释单样本预测结果 2025-5-6 84818 1\XGBoost.pkl")
 
 # Define feature options
 cp_options = {
